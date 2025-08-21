@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snippety - Text Expansion That Saves Time & Money</title>
+    <meta name="description"
+        content="Snippety is a Chrome extension that expands shortcuts into full text, rich templates, and personalized messages anywhere you type. Save hours, reduce errors, and boost productivity.">
+    <meta name="keywords"
+        content="Snippety, text expansion, productivity, Chrome extension, snippets, shortcuts, templates, automation">
+    <meta name="author" content="Eric Muigai">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Snippety - Text Expansion That Saves Time & Money">
+    <meta property="og:description"
+        content="Expand shortcuts into full text, rich templates, and personalized messages anywhere you type. Save hours, reduce errors, and boost productivity.">
+    <meta property="og:image" content="https://snippety.debuggedsoftware.com/og-image.png">
+    <meta property="og:url" content="https://snippety.debuggedsoftware.com/">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Snippety - Text Expansion That Saves Time & Money">
+    <meta name="twitter:description"
+        content="Expand shortcuts into full text, rich templates, and personalized messages anywhere you type. Save hours, reduce errors, and boost productivity.">
+    <meta name="twitter:image" content="https://snippety.debuggedsoftware.com/og-image.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#007cba',
+                        secondary: '#005a87',
+                        accent: '#28a745',
+                        warning: '#ffc107'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BVDL9DEQEB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-BVDL9DEQEB');
+    </script>
+</head>
+
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-lg">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <img src="icons/icon128.png" alt="Snippety Logo" class="h-10 mr-3">
+                    <span class="text-2xl font-bold text-gray-800">Snippety</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#features" class="text-gray-600 hover:text-primary transition">Features</a>
+                    <a href="#benefits" class="text-gray-600 hover:text-primary transition">Benefits</a>
+                    <a href="#pricing" class="text-gray-600 hover:text-primary transition">Pricing</a>
+                    <a href="#download"
+                        class="bg-primary text-white px-6 py-2 rounded-lg hover:bg-secondary transition">Get Started</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-primary to-secondary text-white py-20">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">
+                    Stop Typing. Start <span class="text-yellow-300">Expanding.</span>
+                </h1>
+                <p class="text-xl mb-8 text-blue-100">
+                    Transform repetitive typing into lightning-fast text expansion. Save 2+ hours daily with smart
+                    snippets and placeholders.
+                </p>
+                <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6">
+                    <a href="https://gumroad.com/checkout?product=hsgrjs&quantity=1&_gl=1*qn9ylc*_ga*MTMyNzQ3NzQ2LjE3NTU2MDg4NDA.*_ga_6LJN6D94N6*czE3NTU2MDg4MzkkbzEkZzEkdDE3NTU2MTQ1NjIkajckbDAkaDA."
+                        target="_blank"
+                        class="bg-yellow-400 text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-yellow-300 transition shadow-lg">
+                        <i class="fas fa-shopping-cart mr-2"></i>
+                        Get Snippety on Gumroad
+                    </a>
+                    <div class="text-blue-100">
+                        <i class="fas fa-clock mr-2"></i>
+                        Setup in under 60 seconds
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Features Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-3xl mx-auto">
+                <div class="bg-primary bg-opacity-5 p-10 rounded-2xl shadow-lg text-center">
+                    <h2 class="text-3xl font-bold text-primary mb-6">Why I Built Snippety</h2>
+                    <p class="text-xl text-gray-700 mb-4">
+                        I created Snippety because I was tired of wasting hours every week typing the same messages,
+                        replies, and code over and over again. As someone who juggles emails, support, and projects
+                        daily, I needed a tool that could instantly expand shortcuts into full, personalized text—saving
+                        me time, reducing errors, and letting me focus on what really matters.
+                    </p>
+                    <p class="text-xl text-gray-700 mb-4">
+                        Snippety is the solution I wish I’d had years ago: it helps me work smarter, respond faster, and
+                        keep my workflow organized and effortless. If you’re ready to reclaim your time and boost your
+                        productivity, Snippety was built for you!
+                    </p>
+                    <div class="mt-6">
+                        <span class="inline-block bg-primary text-white px-6 py-2 rounded-full font-semibold shadow">—
+                            Eric, Creator of Snippety</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Time = Money Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-gray-800 mb-4">Time is Money. Stop Wasting Both.</h2>
+                    <p class="text-xl text-gray-600">Research shows the average professional wastes 2.1 hours daily on
+                        repetitive typing</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8 mb-12">
+                    <div class="bg-red-50 p-8 rounded-xl border-l-4 border-red-500">
+                        <h3 class="text-2xl font-bold text-red-700 mb-4">The Problem</h3>
+                        <ul class="space-y-3 text-gray-700">
+                            <li><i class="fas fa-times-circle text-red-500 mr-2"></i>2.1 hours/day on repetitive typing
+                            </li>
+                            <li><i class="fas fa-times-circle text-red-500 mr-2"></i>$15,600/year in lost productivity
+                            </li>
+                            <li><i class="fas fa-times-circle text-red-500 mr-2"></i>523+ hours annually wasted</li>
+                            <li><i class="fas fa-times-circle text-red-500 mr-2"></i>Increased errors & inconsistency
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-green-50 p-8 rounded-xl border-l-4 border-green-500">
+                        <h3 class="text-2xl font-bold text-green-700 mb-4">The Solution</h3>
+                        <ul class="space-y-3 text-gray-700">
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i>85% reduction in typing time</li>
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i>1.8 hours saved daily</li>
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Perfect consistency every time
+                            </li>
+                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Works across all applications
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-blue-50 p-8 rounded-xl border-l-4 border-primary">
+                        <h3 class="text-2xl font-bold text-primary mb-4">Your ROI</h3>
+                        <ul class="space-y-3 text-gray-700">
+                            <li><i class="fas fa-dollar-sign text-primary mr-2"></i>$13,260/year saved</li>
+                            <li><i class="fas fa-chart-line text-primary mr-2"></i>450+ hours back annually</li>
+                            <li><i class="fas fa-rocket text-primary mr-2"></i>3x faster response times</li>
+                            <li><i class="fas fa-trophy text-primary mr-2"></i>100% accuracy guaranteed</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-r from-green-500 to-blue-600 text-white p-8 rounded-2xl text-center">
+                    <h3 class="text-3xl font-bold mb-4">Calculate Your Savings</h3>
+                    <div class="grid md:grid-cols-4 gap-6 text-center">
+                        <div>
+                            <div class="text-4xl font-bold">$30/hr</div>
+                            <div class="text-green-200">Your hourly rate</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-bold">×</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-bold">1.8hrs</div>
+                            <div class="text-green-200">Daily savings</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-bold">= $54</div>
+                            <div class="text-green-200">Per day saved</div>
+                        </div>
+                    </div>
+                    <p class="mt-6 text-xl">That's <strong>$13,260 per year</strong> in recovered productivity!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Video Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl font-bold text-gray-800 mb-8">See Snippety in Action</h2>
+                <p class="text-xl text-gray-600 mb-8">Watch how 3 simple keystrokes replace 200+ characters of typing
+                </p>
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <!-- Video placeholder - replace with your actual video -->
+                    <div
+                        class="aspect-video bg-gray-800 rounded-lg flex items-center justify-center text-white mb-6 relative group">
+                        <video id="demo-video" class="w-full h-full rounded-lg" poster="thumbnail.jpg" controls>
+                            <source src="demo.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <!-- Play Button Overlay -->
+                        <button id="play-btn"
+                            class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 hover:bg-opacity-60 transition group-hover:opacity-100 opacity-100"
+                            style="pointer-events: auto;">
+                            <span
+                                class="flex items-center justify-center w-20 h-20 bg-white bg-opacity-90 rounded-full shadow-lg">
+                                <i class="fas fa-play text-3xl text-primary"></i>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-6 text-sm">
+                        <div class="text-center">
+                            <div class="bg-red-100 text-red-700 px-3 py-1 rounded-full mb-2">Before</div>
+                            <p>Type 200+ characters manually</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full mb-2">With Snippety</div>
+                            <p>Type ":followup" + space</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="bg-green-100 text-green-700 px-3 py-1 rounded-full mb-2">Result</div>
+                            <p>Full message + placeholders</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-800 mb-4">Powerful Features</h2>
+                    <p class="text-xl text-gray-600">Everything you need to eliminate repetitive typing forever</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Smart Placeholders -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition">
+                        <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-magic text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Smart Placeholders</h3>
+                        <p class="text-gray-600 mb-4">Use variables like {customer}, {date}, {product} that
+                            auto-populate or prompt for input.</p>
+                        <div class="bg-gray-50 p-3 rounded text-sm font-mono">
+                            "Hi {customer}, your {product} order is ready!"
+                        </div>
+                    </div>
+
+                    <!-- Instant Triggers -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition">
+                        <div class="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-bolt text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Instant Triggers</h3>
+                        <p class="text-gray-600 mb-4">Type short triggers like ":email" or ":sig" to expand into full
+                            text blocks.</p>
+                        <div class="bg-gray-50 p-3 rounded text-sm">
+                            <span class="text-blue-600">:welcomeDemo</span> → <span class="text-green-600">200+
+                                character
+                                response</span>
+                        </div>
+                    </div>
+
+                    <!-- Categories -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition">
+                        <div class="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-folder text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Smart Categories</h3>
+                        <p class="text-gray-600 mb-4">Organize snippets by Sales, Support, General, or custom
+                            categories.</p>
+                        <div class="flex space-x-2">
+                            <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs">Sales</span>
+                            <span class="bg-green-100 text-green-700 px-2 py-1 rounded text-xs">Support</span>
+                            <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">General</span>
+                        </div>
+                    </div>
+
+                    <!-- Cross-Platform -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition">
+                        <div class="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-globe text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Works Everywhere</h3>
+                        <p class="text-gray-600 mb-4">Gmail, Slack(online), CRM systems, text fields - works in any web
+                            application.</p>
+                        <div class="flex space-x-2">
+                            <i class="fab fa-google text-red-500"></i>
+                            <i class="fab fa-slack text-purple-500"></i>
+                            <i class="fas fa-envelope text-blue-500"></i>
+                            <span class="text-gray-500">+more</span>
+                        </div>
+                    </div>
+
+                    <!-- Sync & Backup -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition">
+                        <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-cloud text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Sync & Backup</h3>
+                        <p class="text-gray-600 mb-4">Auto-sync across devices. Import/export for easy backup and
+                            sharing.</p>
+                        <div class="text-sm text-gray-500">
+                            <i class="fas fa-check text-green-500 mr-2"></i>Cloud sync
+                            <br>
+                            <i class="fas fa-check text-green-500 mr-2"></i>JSON export/import
+                        </div>
+                    </div>
+
+                    <!-- Rich Text -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition">
+                        <div class="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mb-4">
+                            <i class="fas fa-paint-brush text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Rich Text Support</h3>
+                        <p class="text-gray-600 mb-4">Maintain formatting, links, and styles in your expanded text.</p>
+                        <div class="text-sm">
+                            <span class="font-bold">Bold</span>, <span class="italic">italic</span>, <a href="#"
+                                class="text-blue-500 underline">links</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-800 mb-4">Perfect For Every Role</h2>
+                    <p class="text-xl text-gray-600">Professionals across industries save hours daily with Snippety</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Sales -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <div class="text-center mb-6">
+                            <i class="fas fa-chart-line text-4xl text-green-500 mb-4"></i>
+                            <h3 class="text-2xl font-bold text-gray-800">Sales Teams</h3>
+                        </div>
+                        <ul class="space-y-3 text-gray-600">
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Cold outreach templates</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Follow-up sequences</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Pricing proposals</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Meeting scheduling</li>
+                        </ul>
+                        <div class="mt-6 p-4 bg-green-50 rounded-lg">
+                            <p class="text-sm text-green-700">
+                                <strong>Sarah M., Sales Director:</strong> "I save 90 minutes daily on email responses.
+                                That's 6+ extra prospect calls per week!"
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Support -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <div class="text-center mb-6">
+                            <i class="fas fa-headset text-4xl text-blue-500 mb-4"></i>
+                            <h3 class="text-2xl font-bold text-gray-800">Support Teams</h3>
+                        </div>
+                        <ul class="space-y-3 text-gray-600">
+                            <li><i class="fas fa-check text-blue-500 mr-2"></i>Ticket responses</li>
+                            <li><i class="fas fa-check text-blue-500 mr-2"></i>Troubleshooting steps</li>
+                            <li><i class="fas fa-check text-blue-500 mr-2"></i>Resolution confirmations</li>
+                            <li><i class="fas fa-check text-blue-500 mr-2"></i>Escalation notices</li>
+                        </ul>
+                        <div class="mt-6 p-4 bg-blue-50 rounded-lg">
+                            <p class="text-sm text-blue-700">
+                                <strong>Mike R., Support Manager:</strong> "Response times dropped 65%. Customer
+                                satisfaction scores up 23%!"
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- General -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <div class="text-center mb-6">
+                            <i class="fas fa-users text-4xl text-purple-500 mb-4"></i>
+                            <h3 class="text-2xl font-bold text-gray-800">All Professionals</h3>
+                        </div>
+                        <ul class="space-y-3 text-gray-600">
+                            <li><i class="fas fa-check text-purple-500 mr-2"></i>Email signatures</li>
+                            <li><i class="fas fa-check text-purple-500 mr-2"></i>Meeting notes</li>
+                            <li><i class="fas fa-check text-purple-500 mr-2"></i>Status updates</li>
+                            <li><i class="fas fa-check text-purple-500 mr-2"></i>Common responses</li>
+                        </ul>
+                        <div class="mt-6 p-4 bg-purple-50 rounded-lg">
+                            <p class="text-sm text-purple-700">
+                                <strong>Jennifer L., Project Manager:</strong> "Consistent communication across all
+                                channels. Team loves the efficiency!"
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Why Choose Snippety?</h2>
+                <p class="text-xl text-gray-600 mb-12">The most comprehensive text expansion solution available</p>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-rocket text-green-600"></i>
+                        </div>
+                        <div class="text-left">
+                            <h3 class="font-bold text-gray-800 mb-2">Lightning Fast Setup</h3>
+                            <p class="text-gray-600">Install and start using in under 60 seconds. No configuration
+                                needed.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-shield-alt text-blue-600"></i>
+                        </div>
+                        <div class="text-left">
+                            <h3 class="font-bold text-gray-800 mb-2">Privacy First</h3>
+                            <p class="text-gray-600">Your data stays local. Optional cloud sync with enterprise
+                                encryption.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <div
+                            class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-brain text-purple-600"></i>
+                        </div>
+                        <div class="text-left">
+                            <h3 class="font-bold text-gray-800 mb-2">Smart Context Detection</h3>
+                            <p class="text-gray-600">Works with Gmail, Slack, CRMs, and any web application seamlessly.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <div
+                            class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-infinity text-yellow-600"></i>
+                        </div>
+                        <div class="text-left">
+                            <h3 class="font-bold text-gray-800 mb-2">Unlimited Everything</h3>
+                            <p class="text-gray-600">Unlimited snippets, categories, and placeholders. No restrictions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-gray-800 mb-4">Simple, Fair Pricing</h2>
+                    <p class="text-xl text-gray-600">One-time payment. No subscriptions. Upgrade when you need more
+                        power.</p>
+                </div>
+
+                <!-- Centered Pro Plan -->
+                <div class="flex justify-center">
+                    <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-primary relative w-full max-w-md">
+                        <div class="text-center mb-6">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2">Pro $9.99 <span
+                                    class="text-green-600 text-lg font-semibold">(One-Time Purchase)</span></h3>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i>Unlimited
+                                snippets</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i>Advanced
+                                placeholders</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i>Unlimited
+                                categories</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i>Rich text
+                                support</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i>Priority
+                                support</li>
+                        </ul>
+                        <div class="flex justify-center">
+                            <a target="_blank"
+                                href="https://gumroad.com/checkout?product=hsgrjs&quantity=1&_gl=1*qn9ylc*_ga*MTMyNzQ3NzQ2LjE3NTU2MDg4NDA.*_ga_6LJN6D94N6*czE3NTU2MDg4MzkkbzEkZzEkdDE3NTU2MTQ1NjIkajckbDAkaDA."
+                                class="inline-block w-full bg-primary text-white py-3 rounded-lg text-lg font-semibold text-center hover:bg-secondary transition shadow-lg">
+                                Buy Now
+                            </a>
+                        </div>
+                        <div class="text-center mt-4">
+                            <span class="text-green-700 font-semibold">Pay once, own it forever. No recurring
+                                fees.</span>
+                        </div>
+                        <div class="text-center mt-2">
+                            <span class="text-yellow-600 font-semibold">
+                                Special early adopter offer: this one-time fee is available for a limited time only!
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <p class="text-gray-600">
+                        <i class="fas fa-calculator mr-2"></i>
+                        ROI Calculator: At $30/hour, Pro pays for itself in 10 minutes of saved time monthly
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="download" class="py-16 bg-gradient-to-r from-primary to-secondary text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-4">Ready to Save 2+ Hours Daily?</h2>
+            <p class="text-xl mb-8 text-blue-100">Join thousands of professionals who've eliminated repetitive typing
+                forever</p>
+            <div class="max-w-2xl mx-auto">
+                <a href="https://gumroad.com/checkout?product=hsgrjs&quantity=1&_gl=1*qn9ylc*_ga*MTMyNzQ3NzQ2LjE3NTU2MDg4NDA.*_ga_6LJN6D94N6*czE3NTU2MDg4MzkkbzEkZzEkdDE3NTU2MTQ1NjIkajckbDAkaDA."
+                    target="_blank"
+                    class="inline-block bg-yellow-400 text-primary px-10 py-5 rounded-full text-2xl font-extrabold shadow-lg hover:bg-yellow-300 hover:scale-105 transition transform duration-200 mb-4 border-4 border-white">
+                    <i class="fas fa-bolt mr-3"></i>
+                    Get Snippety Pro – One-Time Purchase
+                </a>
+                <div class="mt-4 text-lg text-yellow-200 font-semibold">
+                    Early adopter offer: Pay once, own it forever!
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Add this before the CTA Section, after Pricing or Benefits -->
+    <section id="faq" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold text-gray-800 mb-8 text-center">Frequently Asked Questions</h2>
+                <div class="space-y-8">
+                    <!-- FAQ 1 -->
+                    <div>
+                        <h3 class="text-xl font-semibold text-primary mb-2">How do I download Snippety from Gumroad?
+                        </h3>
+                        <p class="text-gray-700">
+                            Click the "Buy Now" or "Get Snippety on Gumroad" button. Complete your purchase on Gumroad,
+                            and you'll instantly receive a secure download link for the extension. Simply unzip and
+                            follow the included instructions to install in Chrome.
+                        </p>
+                    </div>
+                    <!-- FAQ 2 -->
+                    <div>
+                        <h3 class="text-xl font-semibold text-primary mb-2">Is my data private?</h3>
+                        <p class="text-gray-700">
+                            Absolutely. All your snippets and settings are stored locally on your device. Snippety never
+                            collects, transmits, or shares your data.
+                        </p>
+                    </div>
+                    <!-- FAQ 3 -->
+                    <div>
+                        <h3 class="text-xl font-semibold text-primary mb-2">Does Snippety work on Gmail, Slack, and
+                            other web apps?</h3>
+                        <p class="text-gray-700">
+                            Yes! Snippety works in any web text field or editor, including Gmail, Slack (web), CRMs, and
+                            more.
+                        </p>
+                    </div>
+                    <!-- FAQ 4 -->
+                    <div>
+                        <h3 class="text-xl font-semibold text-primary mb-2">How do I get updates?</h3>
+                        <p class="text-gray-700">
+                            You'll receive update notifications via Gumroad and can always download the latest version
+                            from your Gumroad library.
+                        </p>
+                    </div>
+                    <!-- FAQ 5 -->
+                    <div>
+                        <h3 class="text-xl font-semibold text-primary mb-2">What if I need help or have a feature
+                            request?</h3>
+                        <p class="text-gray-700">
+                            Reach out anytime via the contact form or email snippety@debuggedsoftware.com. We love
+                            feedback!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Newsletter Signup Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="max-w-2xl mx-auto text-center">
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <h2 class="text-3xl font-bold text-primary mb-4">Stay in the Loop</h2>
+                    <p class="text-gray-700 mb-6">Get productivity tips, updates, and exclusive offers. No spam, ever.
+                    </p>
+                    <form action="https://yournewsletterprovider.com/subscribe" method="POST"
+                        class="flex flex-col md:flex-row items-center justify-center gap-4">
+                        <input type="email" name="email" required placeholder="Your email address"
+                            class="w-full md:w-auto px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary">
+                        <button type="submit"
+                            class="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-secondary transition">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy Badges Section -->
+    <section class="py-8 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap justify-center gap-6">
+                <div
+                    class="flex items-center bg-green-100 px-6 py-3 rounded-full shadow text-green-700 font-semibold text-lg">
+                    <i class="fas fa-lock mr-2"></i> Privacy First
+                </div>
+                <div
+                    class="flex items-center bg-blue-100 px-6 py-3 rounded-full shadow text-blue-700 font-semibold text-lg">
+                    <i class="fas fa-user-shield mr-2"></i> No Data Leaves Your Device
+                </div>
+                <div
+                    class="flex items-center bg-yellow-100 px-6 py-3 rounded-full shadow text-yellow-700 font-semibold text-lg">
+                    <i class="fas fa-shield-alt mr-2"></i> Secure Payments
+                </div>
+                <div
+                    class="flex items-center bg-purple-100 px-6 py-3 rounded-full shadow text-purple-700 font-semibold text-lg">
+                    <i class="fas fa-check-circle mr-2"></i> 100% Local Storage
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-bolt text-primary text-xl mr-2"></i>
+                        <span class="text-xl font-bold">Snippety</span>
+                    </div>
+                    <p class="text-gray-400">The fastest way to eliminate repetitive typing and boost productivity.</p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-4">Product</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">Features</a></li>
+                        <li><a href="#" class="hover:text-white transition">Pricing</a></li>
+                        <li><a href="#" class="hover:text-white transition">Downloads</a></li>
+                        <li><a href="#" class="hover:text-white transition">Changelog</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-4">Support</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">Help Center</a></li>
+                        <li><a href="#" class="hover:text-white transition">Contact</a></li>
+                        <li><a href="#" class="hover:text-white transition">Bug Reports</a></li>
+                        <li><a href="#" class="hover:text-white transition">Feature Requests</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-4">Company</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">About</a></li>
+                        <li><a href="#" class="hover:text-white transition">Privacy</a></li>
+                        <li><a href="#" class="hover:text-white transition">Terms</a></li>
+                        <li><a href="#" class="hover:text-white transition">Security</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Snippety. All rights reserved. Made with ⚡ for productivity enthusiasts.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        const playBtn = document.getElementById('play-btn');
+        const video = document.getElementById('demo-video');
+        if (playBtn && video) {
+            playBtn.addEventListener('click', () => {
+                video.play();
+                playBtn.style.display = 'none';
+            });
+            // Hide play button when video is played by other means
+            video.addEventListener('play', () => {
+                playBtn.style.display = 'none';
+            });
+            // Show play button again if video is paused and not ended
+            video.addEventListener('pause', () => {
+                if (!video.ended) playBtn.style.display = '';
+            });
+            // Hide play button when video ends
+            video.addEventListener('ended', () => {
+                playBtn.style.display = '';
+            });
+        }
+    </script>
+</body>
+
+</html>
