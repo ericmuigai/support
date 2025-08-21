@@ -22,26 +22,38 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 // Newsletter API Routes
 Route::prefix('newsletter')->name('newsletter.')->group(function () {
-    Route::get('/', [NewsletterController::class, 'index'])->name('index');
+    
     Route::post('/', [NewsletterController::class, 'store'])->name('store');
     Route::get('/verify/{token}', [NewsletterController::class, 'verify'])->name('verify');
     Route::get('/{newsletter}', [NewsletterController::class, 'show'])->name('show');
-    Route::put('/{newsletter}', [NewsletterController::class, 'update'])->name('update');
+    // Public endpoints
+    Route::post('/', [NewsletterController::class, 'store'])->name('store');
+    Route::get('/verify/{token}', [NewsletterController::class, 'verify'])->name('verify');
     Route::delete('/unsubscribe/{email}', [NewsletterController::class, 'unsubscribe'])->name('unsubscribe');
-    Route::delete('/{newsletter}', [NewsletterController::class, 'destroy'])->name('destroy');
+
+    // Protected endpoints (require auth)
+    Route::middleware('auth:sanctum')->group(function () {
+        Route::get('/', [NewsletterController::class, 'index'])->name('index');
+        Route::get('/{newsletter}', [NewsletterController::class, 'show'])->name('show');
+        Route::put('/{newsletter}', [NewsletterController::class, 'update'])->name('update');
+        Route::delete('/{newsletter}', [NewsletterController::class, 'destroy'])->name('destroy');
+    });
 });
 
 // Support System API Routes
 Route::prefix('support')->name('support.')->group(function () {
-    Route::get('/', [SupportController::class, 'index'])->name('index');
+    // Public endpoints
     Route::post('/', [SupportController::class, 'store'])->name('store');
-    Route::get('/statistics', [SupportController::class, 'statistics'])->name('statistics');
-    Route::get('/email/{email}', [SupportController::class, 'getByEmail'])->name('getByEmail');
-    Route::get('/{ticketId}', [SupportController::class, 'show'])->name('show');
-    Route::put('/{ticketId}', [SupportController::class, 'update'])->name('update');
-    Route::delete('/{ticketId}', [SupportController::class, 'destroy'])->name('destroy');
-    // Explicit contact endpoint
     Route::post('/contact', [SupportController::class, 'contact'])->name('contact');
+
+    // Protected endpoints (require auth)
+    Route::middleware('auth:sanctum')->group(function () {
+        Route::get('/statistics', [SupportController::class, 'statistics'])->name('statistics');
+        Route::get('/email/{email}', [SupportController::class, 'getByEmail'])->name('getByEmail');
+        Route::get('/{ticketId}', [SupportController::class, 'show'])->name('show');
+        Route::put('/{ticketId}', [SupportController::class, 'update'])->name('update');
+        Route::delete('/{ticketId}', [SupportController::class, 'destroy'])->name('destroy');
+    });
 });
 
 // Health check endpoint
